@@ -1,0 +1,38 @@
+﻿@using TukcellKursWorking.Controllers
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Example-Index Sayıfasındasın</h1>
+
+<p>@ViewBag.sayi</p>
+
+@foreach (var item in ViewData["names"] as List<String>)
+{
+    <p>@item</p>
+}
+@TempData["Age"]
+
+@model List<Product>;
+@foreach (var item in Model)
+{
+    <p>@item.Id  -  @item.Name</p>
+}
+
+@{
+    var dateTime = DateTime.Now.ToShortDateString();
+    var message = "seni çook seviyorum";
+    @: bugünün tarihi: @DateTime.Now.ToShortDateString()
+    <text>bugünün tarihi: @DateTime.Now.ToShortDateString() </text>
+    // ikisi aynı kullanım
+    <div>@dateTime</div>
+    <div>@message</div>
+}
+
+@section Css
+{
+    @*css Kodları Buraya Yazılır*@
+}
+    
+
+
