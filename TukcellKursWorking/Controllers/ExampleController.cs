@@ -3,7 +3,7 @@ using TukcellKursWorking.Models;
 
 namespace TukcellKursWorking.Controllers
 {
-    public class Product
+    public class Product2
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -15,7 +15,7 @@ namespace TukcellKursWorking.Controllers
         {
             ViewBag.sayi = 1;
             ViewData["names"] = new List<String>() {"samet", "mehmet", "emre"};
-            var products = new List<Product>()
+            var products = new List<Product2>()
             {
                 new(){Id = 1, Name = "Samet" },
                 new(){Id = 2, Name = "Berna" }
